@@ -1,2 +1,2 @@
-# dundler-mifflin
+# Dundler Mifflin | Paper Company
 Descrição em breve

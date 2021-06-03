@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap");
+
+@font-face {
+  font-family: "icomoon";
+  src: url("/css/fonts/");
+  src: url("/css/fonts/#iefix") format("embedded-opentype"),
+    url("/css/fonts/icomoon.ttf?3bfo0i") format("truetype"),
+    url("/css/fonts/icomoon.woff?3bfo0i") format("woff"),
+    url("/css/fonts/icomoon.svg?3bfo0i#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-certified:before {
+  content: "\e904";
+}
+.icon-coin:before {
+  content: "\e905";
+}
+.icon-paper:before {
+  content: "\e918";
+}
+.icon-people:before {
+  content: "\e919";
+}
+.icon-quote:before {
+  content: "\e91a";
+  color: #00a6cf;
+}
+
+body {
+  background-color: #f1f1f1;
+  color: #484b4d;
+  font-family: "Rubik", Arial, Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #484b4d;
+  transition: all 0.2s ease-in-out;
+}
+a:hover {
+  color: #00a6cf;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.btn-transparente {
+  font-family: "Rubik", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 0.87em;
+  color: #fff;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  border: 2px solid #00a6cf;
+  padding: 5px 30px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-transparente:hover {
+  background-color: #00a6cf;
+  color: #000;
+  border-color: #000;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 15px 0;
+}
+.header-logo {
+  margin: 0 10px;
+}
+.header-menu ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.header-menu ul a {
+  font-size: 1.25em;
+  display: block;
+  margin: 0 10px;
+  padding: 10px 0;
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+.header-menu ul a.ativo,
+.header-menu ul a:hover {
+  border-bottom: 2px solid #00a6cf;
+}
+
+.slider-bg {
+  background: url("../img/bg-header.png") center no-repeat;
+  background-size: cover;
+  height: 389px;
+}
+
+.slider {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 960px;
+  margin: 0 auto;
+  height: 389px;
+}
+
+.texto-slider {
+  flex: 0 1 400px;
+  margin: 0 10px;
+}
+.texto-slider h2 {
+  font-size: 2.5em;
+  color: #fff;
+  font-weight: 500;
+}
+.texto-slider p {
+  font-size: 1em;
+  color: #fff;
+  font-weight: 300;
+  margin: 10px 0 25px 0;
+}
+
+.index-about-bg {
+  background-color: #fff;
+}
+
+.index-about {
+  max-width: 960px;
+  margin: 65px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.index-titulo {
+  flex: 1 1 960px;
+}
+.index-about h1 {
+  margin: 20px 0;
+  text-align: center;
+  font-size: 1.87em;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #006aa6;
+}
+.index-about h1::after {
+  content: "";
+  display: block;
+  background: url("../img/divisoria-titulo.png") center no-repeat;
+  width: 170px;
+  height: 16px;
+  margin: 0 auto;
+}
+.index-about-esquerda {
+  flex-direction: column;
+}
+.index-about-direita {
+  flex-direction: column;
+}
+.index-about-frase {
+  flex: 1;
+  width: 300px;
+  min-width: 100px;
+}
+.index-about-frase h3 {
+  font-size: 1.25em;
+  font-weight: 500;
+  color: #006aa6;
+}
+.index-about-frase h3::before {
+  content: "\e919";
+  display: inline-block;
+  font-size: 20px;
+  font-family: "icomoon" !important;
+  font-weight: 700;
+  margin-right: 15px;
+  color: #000;
+}
+
+.index-about-frase p {
+  font-size: 1em;
+  font-weight: 300;
+  margin: 10px 0;
+}
+.index-about-btn {
+  flex: 1 1 960px;
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+  .index-about-img {
+    display: none;
+  }
+}
