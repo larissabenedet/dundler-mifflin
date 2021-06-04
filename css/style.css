@@ -1,21 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap");
 
 @font-face {
-  font-family: "icomoon";
-  src: url("/css/fonts/");
-  src: url("/css/fonts/#iefix") format("embedded-opentype"),
-    url("/css/fonts/icomoon.ttf?3bfo0i") format("truetype"),
-    url("/css/fonts/icomoon.woff?3bfo0i") format("woff"),
-    url("/css/fonts/icomoon.svg?3bfo0i#icomoon") format("svg");
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?vies56');
+  src:  url('fonts/icomoon.eot?vies56#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?vies56') format('truetype'),
+    url('fonts/icomoon.woff?vies56') format('woff'),
+    url('fonts/icomoon.svg?vies56#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-[class^="icon-"],
-[class*=" icon-"] {
+[class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "icomoon" !important;
+  font-family: 'icomoon' !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -28,11 +27,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-banknote:before {
+  content: "\e900";
+}
 .icon-certified:before {
   content: "\e904";
-}
-.icon-coin:before {
-  content: "\e905";
 }
 .icon-paper:before {
   content: "\e918";
@@ -83,6 +82,25 @@ img {
   background-color: #00a6cf;
   color: #000;
   border-color: #000;
+}
+
+.btn {
+  font-family: "Rubik", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 0.87em;
+  color: #fff;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  background-color: #00a6cf;
+  border: none;
+  border-bottom: 2px solid #006aa6;
+  padding: 7px 50px;
+}
+.btn:hover {
+  background-color: #000;
+  border-color: #00a6cf;
 }
 
 .header {
@@ -149,6 +167,8 @@ img {
 
 .index-about-bg {
   background-color: #fff;
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.13);
+  position: relative;
 }
 
 .index-about {
@@ -157,26 +177,28 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  padding: 30px 0;
 }
 .index-titulo {
   flex: 1 1 960px;
 }
-.index-about h1 {
-  margin: 20px 0;
+.index-about h1, .index-products h1 {
   text-align: center;
   font-size: 1.87em;
   letter-spacing: 0.5px;
   font-weight: 600;
   text-transform: uppercase;
   color: #006aa6;
+  margin-bottom: 20px;
 }
-.index-about h1::after {
+.index-about h1::after, .index-products h1::after {
   content: "";
   display: block;
   background: url("../img/divisoria-titulo.png") center no-repeat;
   width: 170px;
   height: 16px;
-  margin: 0 auto;
+  margin: 2px auto;
 }
 .index-about-esquerda {
   flex-direction: column;
@@ -188,20 +210,34 @@ img {
   flex: 1;
   width: 300px;
   min-width: 100px;
+  margin: 0 10px 20px 10px;
 }
 .index-about-frase h3 {
   font-size: 1.25em;
   font-weight: 500;
   color: #006aa6;
 }
+
 .index-about-frase h3::before {
-  content: "\e919";
   display: inline-block;
-  font-size: 20px;
+  font-size: 22px;
   font-family: "icomoon" !important;
   font-weight: 700;
-  margin-right: 15px;
+  margin-right: 13px;
   color: #000;
+}
+
+.index-about-esquerda .index-about-frase:nth-of-type(1) h3::before {
+  content: "\e919";
+}
+.index-about-esquerda .index-about-frase:nth-of-type(2) h3::before {
+  content: "\e918";
+}
+.index-about-direita .index-about-frase:nth-of-type(1) h3::before {
+  content: "\e904";
+}
+.index-about-direita .index-about-frase:nth-of-type(2) h3::before {
+  content: "\e900";
 }
 
 .index-about-frase p {
@@ -209,13 +245,100 @@ img {
   font-weight: 300;
   margin: 10px 0;
 }
-.index-about-btn {
-  flex: 1 1 960px;
-  text-align: center;
+
+.index-about-btn .btn{
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-@media (max-width: 800px) {
+.index-about-img {
+  background-color: #006aa6;
+  height: 220px;
+  width: 220px;
+  display: flex;
+  padding: 50px;
+  box-sizing: border-box;
+  box-shadow: 0 3px 6px #A9AEB3;
+  margin: 0 30px 20px 30px;
+}
+
+@media (max-width: 960px) {
   .index-about-img {
     display: none;
+  }
+}
+
+.index-products {
+  max-width: 960px;
+  margin: 60px auto;
+}
+
+.index-products-conteudo {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  margin: 0 10px;
+}
+
+.index-products-img {
+  flex: 0 1 460px;
+  margin-right: 10px;
+}
+.index-products-img img{
+  border-bottom: 2px solid #00a6cf;
+}
+.index-products-img p, .index-products-img span {
+  display: none;
+}
+
+.index-products-desc {
+  position: relative;
+  flex: 0 1 460px;
+  background: url("../img/quote.svg") right top no-repeat;
+  background-color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 40px;
+  box-sizing: border-box;
+  box-shadow: 0 3px 6px #a9aeb38f;
+}
+
+.index-products-desc p {
+  font-size: 1em;
+  line-height: 1.2;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.index-products .btn {
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (max-width: 960px) {
+  .index-products-img {
+    margin-right: 10px;
+  }
+}
+@media (max-width: 949px) {
+  .index-products-img {
+    margin-right: 5px;
+  }
+}
+@media (max-width: 944px) {
+  .index-products-img {
+    margin-right: 0;
+  }
+}
+@media (max-width: 939px) {
+  .index-products-img {
+    margin-bottom: 20px;
   }
 }
