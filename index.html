@@ -94,13 +94,15 @@
           <h1>Products</h1>
         </div>
 
-        <div class="index-products-img">
+        <div class="index-products-img" onmousemove="hoverProdutos()" onmouseout="outHoverProdutos()">
           <img src="img/testeprod.png" alt="Produto" />
-          <p>
-            "O Lorem Ipsum é um texto modelo da indústria tipográfica e de
-            impressão. "
-          </p>
-          <span>$10 ~ $30</span>
+          <div class="products-hover">
+              <p>
+                "O Lorem Ipsum é um texto modelo da indústria tipográfica e de
+                impressão. "
+              </p>
+              <span>$10 ~ $30</span>
+          </div>
         </div>
         <div class="index-products-desc">
           <p>
@@ -111,23 +113,23 @@
             efforts. Track tens of thousands of keywords and manage valuable
             keyterms with easy-to-edit labels.
           </p>
-          <button class="btn">Learn more</button>
+          <a href="produtos"><button class="btn">Learn more</button></a>
         </div>
       </div>
     </section>
 
     <section class="index-gallery">
-      <div>
-        <img src="" alt="" />
-        <p>See more</p>
+      <div class="img-gallery">
+        <img src="img/1gallery.jpg" alt="Imagem 1" />
+        <a href="about.html"><p class="texto-gallery">See more</p></a>
       </div>
-      <div>
-        <img src="" alt="" />
-        <p>See more</p>
+      <div class="img-gallery">
+        <img src="img/2gallery.jpg" alt="Imagem 2" />
+        <a href="about.html"><p class="texto-gallery">See more</p></a>
       </div>
-      <div>
-        <img src="" alt="" />
-        <p>See more</p>
+      <div class="img-gallery">
+        <img src="img/3gallery.jpg" alt="Imagem 3" />
+        <a href="about.html"><p class="texto-gallery">See more</p></a>
       </div>
     </section>
 
@@ -140,26 +142,24 @@
             and information technology products furniture printing values and
             the expertise required for making informed buying decisions.
           </p>
-          <button class="btn-transparente">Contact us</button>
+          <a href="contact.html"><button class="btn-transparente">Contact us</button></a>
         </div>
         <div class="index-quotes-clientes">
-          <img src="" alt="" />
+          <div>
+            <img src="img/cliente1.png" alt="Cliente 1" />
+            <blockquote>
+              <p>
+                Dunder Mifflin Incorporated provides its customers quality office and information technology products furniture printing value
+              </p>
+              <cite>Fulano de tal</cite>
+            </blockquote>
+          </div>
+          <div class="divisoria-clientes"></div>
+        <div>
+          <img src="img/cliente2.png" alt="Cliente 1" />
           <blockquote>
             <p>
-              Dunder Mifflin Incorporated provides its customers quality office
-              and information technology products furniture printing values and
-              the expertise required for making informed buying decisions.
-            </p>
-            <cite>Fulano de tal</cite>
-          </blockquote>
-        </div>
-        <div class="index-quotes-clientes">
-          <img src="" alt="" />
-          <blockquote>
-            <p>
-              Dunder Mifflin Incorporated provides its customers quality office
-              and information technology products furniture printing values and
-              the expertise required for making informed buying decisions.
+              Dunder Mifflin Incorporated provides its customers quality office and information technology products furniture printing value
             </p>
             <cite>Fulano de tal</cite>
           </blockquote>
@@ -214,5 +214,6 @@
         </div>
       </div>
     </footer>
+    <script type="text/javascript" src="scripts.js"></script>
   </body>
 </html>

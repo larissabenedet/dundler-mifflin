@@ -1,20 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap");
 
 @font-face {
-  font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?vies56');
-  src:  url('fonts/icomoon.eot?vies56#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?vies56') format('truetype'),
-    url('fonts/icomoon.woff?vies56') format('woff'),
-    url('fonts/icomoon.svg?vies56#icomoon') format('svg');
+  font-family: "icomoon";
+  src: url("fonts/icomoon.eot?vies56");
+  src: url("fonts/icomoon.eot?vies56#iefix") format("embedded-opentype"),
+    url("fonts/icomoon.ttf?vies56") format("truetype"),
+    url("fonts/icomoon.woff?vies56") format("woff"),
+    url("fonts/icomoon.svg?vies56#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^="icon-"],
+[class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
+  font-family: "icomoon" !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -183,7 +184,8 @@ img {
 .index-titulo {
   flex: 1 1 960px;
 }
-.index-about h1, .index-products h1 {
+.index-about h1,
+.index-products h1 {
   text-align: center;
   font-size: 1.87em;
   letter-spacing: 0.5px;
@@ -192,7 +194,8 @@ img {
   color: #006aa6;
   margin-bottom: 20px;
 }
-.index-about h1::after, .index-products h1::after {
+.index-about h1::after,
+.index-products h1::after {
   content: "";
   display: block;
   background: url("../img/divisoria-titulo.png") center no-repeat;
@@ -246,7 +249,7 @@ img {
   margin: 10px 0;
 }
 
-.index-about-btn .btn{
+.index-about-btn .btn {
   position: absolute;
   bottom: -15px;
   left: 50%;
@@ -260,7 +263,7 @@ img {
   display: flex;
   padding: 50px;
   box-sizing: border-box;
-  box-shadow: 0 3px 6px #A9AEB3;
+  box-shadow: 0 3px 6px #a9aeb3;
   margin: 0 30px 20px 30px;
 }
 
@@ -284,14 +287,72 @@ img {
 }
 
 .index-products-img {
+  position: relative;
   flex: 0 1 460px;
   margin-right: 10px;
-}
-.index-products-img img{
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
   border-bottom: 2px solid #00a6cf;
 }
-.index-products-img p, .index-products-img span {
-  display: none;
+
+.products-hover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  text-align: center;
+  letter-spacing: 0.5px;
+  line-height: 24px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+.products-hover p::before {
+  content: "";
+  display: block;
+  background: url("../img/divisoria-produto.png") center no-repeat;
+  margin: 5px auto;
+  width: 288px;
+  height: 16px;
+}
+.products-hover p::after {
+  content: "";
+  display: block;
+  background-color: #fff;
+  margin: 10px auto;
+  width: 288px;
+  height: 2px;
+  opacity: 0.5;
+}
+.products-hover p {
+  max-width: 346px;
+}
+.products-hover span {
+  font-weight: bold;
+  margin-top: 25px;
+  letter-spacing: 0.5px;
+}
+
+.index-products-img:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+.index-products-img:hover:after {
+  opacity: 1;
 }
 
 .index-products-desc {
@@ -324,21 +385,198 @@ img {
 
 @media (max-width: 960px) {
   .index-products-img {
-    margin-right: 10px;
-  }
-}
-@media (max-width: 949px) {
-  .index-products-img {
-    margin-right: 5px;
-  }
-}
-@media (max-width: 944px) {
-  .index-products-img {
     margin-right: 0;
+    margin-bottom: 20px;
   }
 }
-@media (max-width: 939px) {
-  .index-products-img {
-    margin-bottom: 20px;
+
+.index-gallery {
+  display: flex;
+  margin-bottom: 60px;
+}
+.img-gallery {
+  flex: 1 1 260px;
+  position: relative;
+}
+.texto-gallery {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  color: #fff;
+  font-size: 1.62em;
+  line-height: 24px;
+  font-weight: 600;
+  text-transform: uppercase;
+  z-index: 999;
+}
+.texto-gallery::after {
+  content: "";
+  display: block;
+  width: 117px;
+  height: 1px;
+  background-color: #fff;
+  margin-top: 10px;
+}
+.img-gallery img {
+  min-height: 100%;
+}
+.img-gallery:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+.img-gallery:hover:after {
+  opacity: 1;
+}
+.img-gallery:hover .texto-gallery {
+  display: flex;
+}
+
+.index-clientes-bg {
+  background-color: #FFF;
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.13);
+  margin-bottom: 90px;
+}
+
+.index-clientes {
+  max-width: 960px;
+  margin: 10px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 70px 0;
+}
+
+.index-desc-clientes {
+  max-width: 345px;
+}
+
+.index-desc-clientes h1{
+  color: #006aa6;
+  font-size: 30px;
+  line-height: 34px;
+  letter-spacing: .50px;
+  font-weight: bold;
+  text-transform: uppercase;
+  max-width: 311px;
+}
+
+.index-desc-clientes h1 b{
+  color: #00a6cf;
+  font-weight: bold;
+}
+
+.index-desc-clientes p{
+  margin: 20px 0;
+  font-weight: 300;
+  line-height: 20px;
+  color: #484B4D;
+}
+
+.index-desc-clientes .btn-transparente{
+  color: #000;
+}
+
+.index-quotes-clientes {
+  display: flex;
+  flex-direction: column;
+  max-width: 450px;
+}
+
+.index-quotes-clientes div{
+  display: flex;
+  align-items: center;
+}
+
+.divisoria-clientes {
+  content: '';
+  align-self: flex-end;
+  background: url("../img/divisoria-clientes.png") center no-repeat;
+  width: 296px;
+  height: 16px;
+  margin: 15px 10px 10px 0;
+}
+
+.index-quotes-clientes div img{
+  margin-right: 30px;
+  align-self: flex-start;
+}
+
+.index-quotes-clientes div p{
+  font-size: 14px;
+  line-height: 20px;
+  color: #484B4D;
+}
+
+.index-quotes-clientes div cite{
+  display: block;
+  font-weight: 500;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+@media (max-width: 794px) {
+  .index-clientes {
+    padding: 40px 80px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .index-desc-clientes {
+    max-width: none;
+    margin: 0 10px 30px 10px;
+  }
+  .index-desc-clientes h1{
+    max-width: none;
+  }
+  .index-quotes-clientes {
+    text-align: start;
+    max-width: none;
+    margin: 0 10px;
+  }
+  .index-quotes-clientes div p, .index-quotes-clientes div cite{
+    font-size: 16px;
+  }
+  .divisoria-clientes {
+    background: none;
+    background-color: #D9E0E6;
+    height: 1px;
+    width: 74%;
+    align-self: flex-end;
+    margin: 20px 0;
+  }
+}
+
+@media (max-width: 550px) {
+  .index-clientes {
+    padding: 40px;
+  }
+  .divisoria-clientes {
+    width: 68%;
+  }
+}
+
+@media (max-width: 415px) {
+  .index-clientes {
+    padding: 20px;
+  }
+  .divisoria-clientes {
+    width: 60%;
+  }
+  .index-quotes-clientes div p{
+    max-height: 160px;
+    overflow: auto;
   }
 }
