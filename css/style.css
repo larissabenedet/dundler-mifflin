@@ -210,7 +210,8 @@ img {
 .index-products h1::after,
 .gallery-texto h1::after,
 .team h1::after,
-.products h1::after {
+.products h1::after,
+.contact h1::after {
   content: "";
   display: block;
   background: url("../img/divisoria-titulo.png") center no-repeat;
@@ -1123,4 +1124,37 @@ img {
   .item::after {
     width: 100%;
   }
+}
+
+/* Página contato */
+
+.slider-contact-bg {
+  background: url("../img/contact/bg-contact.png") center no-repeat;
+  background-size: cover;
+  height: 389px;
+}
+.slider-contact-bg h2{
+  text-transform: uppercase;
+}
+.contact {
+  max-width: 960px;
+  margin: 40px auto;
+}
+.contact h1{
+  text-align: center;
+  font-size: 30px;
+  line-height: 24px;
+  letter-spacing: .50px;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #006aa6;
+  margin-bottom: 30px;
+}
+.contact-conteudo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#img-map {
+  flex: 1;
 }
