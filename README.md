@@ -8,4 +8,4 @@ with the intention of presenting the company and its products to a younger audie
 ## Technologies
 - Adobe XD
 - HTML/CSS
-- Jquery (Plugins: Fancybox, Slick and Messagebox)
+- JQuery (Plugins: Fancybox, Slick and Messagebox)
