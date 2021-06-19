@@ -8,14 +8,15 @@
     <link rel="stylesheet" href="css/reset.css" type="text/css" />
     <link rel="stylesheet" href="css/style.css" type="text/css" />
     <link href="css/messagebox.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
     <header>
-      <div class="header">
-        <div class="header-logo">
+      <div class="header" data-aos="fade-down">
+        <div class="header-logo" data-aos="fade-down">
           <a href="/"><img src="img/logo.svg" alt="Dundler Mifflin" /></a>
         </div>
-        <div class="header-menu">
+        <div class="header-menu" data-aos="fade-down">
           <nav>
             <ul>
               <li><a href="index.html">Home</a></li>
@@ -28,9 +29,9 @@
       </div>
     </header>
 
-    <div class="slider-contact-bg">
+    <div class="slider-contact-bg" data-aos="fade-down">
       <div class="slider">
-        <div class="texto-slider">
+        <div class="texto-slider" data-aos="fade-down">
           <h2>Contact us</h2>
           <p>We are always ready to answer your questions and help you.</p>
         </div>
@@ -38,12 +39,12 @@
     </div>
 
     <section class="contact">
-      <h1>Get In Touch With Us</h1>
+      <h1 data-aos="fade-down">Get In Touch With Us</h1>
       <div class="contact-conteudo">
-        <div id="img-map">
+        <div id="img-map" data-aos="fade-down">
           <img src="/img/contact/map.png" alt="Map" />
         </div>
-        <form action="" id="form">
+        <form action="" id="form" data-aos="fade-down">
           <input type="text" name="name" id="name" placeholder="Name" />
           <input type="text" name="email" id="email" placeholder="E-mail" />
           <input type="text" name="phone" id="phone" placeholder="Phone" />
@@ -104,6 +105,7 @@
     </footer>
     <script src="js/jquery.js"></script>
     <script src="js/messagebox.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       $("#form").submit(function (event) {
         $.MessageBox(
@@ -111,6 +113,7 @@
         );
         event.preventDefault();
       });
+      AOS.init();
     </script>
   </body>
 </html>

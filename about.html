@@ -7,6 +7,7 @@
     <title>About | Dundler Mifflin</title>
     <link rel="stylesheet" href="css/reset.css" type="text/css" />
     <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"
@@ -16,11 +17,11 @@
   </head>
   <body>
     <header>
-      <div class="header">
-        <div class="header-logo">
+      <div class="header" data-aos="fade-down">
+        <div class="header-logo" data-aos="fade-down">
           <a href="/"><img src="img/logo.svg" alt="Dundler Mifflin" /></a>
         </div>
-        <div class="header-menu">
+        <div class="header-menu" data-aos="fade-down">
           <nav>
             <ul>
               <li><a href="index.html">Home</a></li>
@@ -33,9 +34,9 @@
       </div>
     </header>
 
-    <div class="slider-about-bg">
-      <div class="slider">
-        <div class="texto-slider">
+    <div class="slider-about-bg" data-aos="fade-down">
+      <div class="slider" data-aos="fade-down">
+        <div class="texto-slider" data-aos="fade-down">
           <h2>Get to know our company better</h2>
           <p>
             Products and services with a dedication to the highest degree of
@@ -46,8 +47,8 @@
     </div>
 
     <section class="history-about-bg">
-      <div class="history-about">
-        <div class="history-texto">
+      <div class="history-about" data-aos="fade-down">
+        <div class="history-texto" data-aos="fade-down">
           <h1>Our History</h1>
           <p>
             The company was founded by Robert Dunder and Robert Mifflin in 1949,
@@ -57,7 +58,7 @@
             Northeastern United States.
           </p>
         </div>
-        <div class="history-timeline">
+        <div class="history-timeline" data-aos="fade-down">
           <div id="item-1" class="timeline">
             <span>1949</span>
             <h2>Dundler Mifflin was founded</h2>
@@ -136,11 +137,6 @@
       <div>
         <a href="img/about/jo.jpg" data-fancybox="gallery-fotos-ny"
           ><img src="img/about/jo.jpg" alt="Gallery Image"
-        /></a>
-      </div>
-      <div>
-        <a href="img/about/david.jpg" data-fancybox="gallery-fotos-ny"
-          ><img src="img/about/david.jpg" alt="Gallery Image"
         /></a>
       </div>
       <div>
@@ -295,8 +291,11 @@
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
     <script type="text/javascript" src="scripts.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script type="text/javascript">
       $(document).ready(function () {
+        AOS.init();
+
         $(".gallery-fotos-scranton").slick({
           slidesToShow: 4,
           slidesToScroll: 4,
@@ -304,6 +303,15 @@
           arrows: false,
           infinite: true,
           autoplay: true,
+          responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+              },
+            },
+          ],
         });
         $(".gallery-fotos-ny").slick({
           slidesToShow: 4,
@@ -312,6 +320,15 @@
           arrows: false,
           infinite: true,
           autoplay: true,
+          responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+              },
+            },
+          ],
         });
         $(".gallery-fotos-utica").slick({
           slidesToShow: 4,
@@ -320,6 +337,15 @@
           arrows: false,
           infinite: true,
           autoplay: true,
+          responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+              },
+            },
+          ],
         });
       });
     </script>

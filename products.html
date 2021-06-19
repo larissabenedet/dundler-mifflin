@@ -7,14 +7,19 @@
     <title>Products | Dundler Mifflin</title>
     <link rel="stylesheet" href="css/reset.css" type="text/css" />
     <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
     <header>
-      <div class="header">
-        <div class="header-logo">
+      <div class="header" data-aos="fade-down">
+        <div class="header-logo" data-aos="fade-down">
           <a href="/"><img src="img/logo.svg" alt="Dundler Mifflin" /></a>
         </div>
-        <div class="header-menu">
+        <div class="header-menu" data-aos="fade-down">
           <nav>
             <ul>
               <li><a href="index.html">Home</a></li>
@@ -27,9 +32,9 @@
       </div>
     </header>
 
-    <div class="slider-products-bg">
+    <div class="slider-products-bg" data-aos="fade-down">
       <div class="slider">
-        <div class="texto-slider">
+        <div class="texto-slider" data-aos="fade-down">
           <h2>Know our products</h2>
           <p>
             Products and services with a dedication to the highest degree of
@@ -40,11 +45,13 @@
     </div>
 
     <section class="products">
-      <h1>Our Products</h1>
-      <div class="products-cards">
+      <h1 data-aos="fade-down">Our Products</h1>
+      <div class="products-cards" data-aos="fade-down">
         <div class="product">
           <div class="img-product paper">
-            <img src="img/products/1.png" alt="Product 1" />
+            <a data-fancybox="products" href="img/products/1.png"
+              ><img src="img/products/1.png" alt="Product 1"
+            /></a>
           </div>
           <div class="texto-product">
             <span>Dundler Mifflin Paper</span>
@@ -53,7 +60,9 @@
         </div>
         <div class="product">
           <div class="img-product">
-            <img src="img/products/2.png" alt="Product 2" />
+            <a data-fancybox="products" href="img/products/2.png"
+              ><img src="img/products/2.png" alt="Product 2"
+            /></a>
           </div>
           <div class="texto-product">
             <span>Dundler Mifflin Papers</span>
@@ -62,7 +71,9 @@
         </div>
         <div class="product">
           <div class="img-product">
-            <img src="img/products/3.png" alt="Product 3" />
+            <a data-fancybox="products" href="img/products/3.png"
+              ><img src="img/products/3.png" alt="Product 3"
+            /></a>
           </div>
           <div class="texto-product">
             <span>Dunder Mifflin office supplies</span>
@@ -73,8 +84,8 @@
     </section>
 
     <section class="features">
-      <div class="features-conteudo">
-        <div class="features-itens">
+      <div class="features-conteudo" data-aos="fade-down">
+        <div class="features-itens" data-aos="fade-down">
           <div class="item">
             <div>
               <img
@@ -103,7 +114,7 @@
             <div><p>Our team is always at your service.</p></div>
           </div>
         </div>
-        <div class="features-texto">
+        <div class="features-texto" data-aos="fade-down">
           <h1>Features of our products</h1>
           <p>
             Get to know some of the main features of our company's products.
@@ -165,5 +176,10 @@
       </div>
     </footer>
     <script src="js/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

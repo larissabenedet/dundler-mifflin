@@ -8,14 +8,17 @@
     <link rel="stylesheet" href="css/reset.css" type="text/css" />
     <link rel="stylesheet" href="css/style.css" type="text/css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   </head>
   <body>
     <header>
-      <div class="header">
-        <div class="header-logo">
+      <div class="header" data-aos="fade-down">
+        <div class="header-logo" data-aos="fade-down">
           <a href="/"><img src="img/logo.svg" alt="Dundler Mifflin" /></a>
         </div>
-        <div class="header-menu">
+        <div class="header-menu" data-aos="fade-down">
           <nav>
             <ul>
               <li><a href="index.html" class="ativo">Home</a></li>
@@ -28,9 +31,9 @@
       </div>
     </header>
 
-    <div class="slider-bg">
+    <div class="slider-bg" data-aos="fade-down">
       <div class="slider">
-        <div class="texto-slider">
+        <div class="texto-slider" data-aos="fade-down">
           <h2>Dedication to the costumer.</h2>
           <p>
             Products and services with a dedication to the highest degree of
@@ -43,43 +46,39 @@
       </div>
     </div>
 
-    <section class="index-about-bg">
+    <section class="index-about-bg" data-aos="fade-down">
       <div class="index-about">
-        <div class="index-titulo">
+        <div class="index-titulo" data-aos="fade-down">
           <h1>About us</h1>
         </div>
-        <div class="index-about-esquerda">
+        <div class="index-about-esquerda" data-aos="fade-down">
           <div class="index-about-frase">
             <h3>Certified contrators</h3>
             <p>
-              Believe it or not I'm walking on air. I never thought I could feel
-              so free. Flying away on a wing and a
+              Dunder Mifflin Paper Company, Inc. is a fictional paper company in the television series The Office.
             </p>
           </div>
           <div class="index-about-frase">
             <h3>Certified contrators</h3>
             <p>
-              Believe it or not I'm walking on air. I never thought I could feel
-              so free. Flying away on a wing and a
+              Dunder Mifflin Paper Company, Inc. is a fictional paper company in the television series The Office.
             </p>
           </div>
         </div>
-        <div class="index-about-img">
+        <div class="index-about-img" data-aos="fade-down">
           <img src="img/team.svg" alt="Team" />
         </div>
-        <div class="index-about-direita">
+        <div class="index-about-direita" data-aos="fade-down">
           <div class="index-about-frase">
             <h3>Certified contrators</h3>
             <p>
-              Believe it or not I'm walking on air. I never thought I could feel
-              so free. Flying away on a wing and a
+              Dunder Mifflin Paper Company, Inc. is a fictional paper company in the television series The Office.
             </p>
           </div>
           <div class="index-about-frase">
             <h3>Certified contrators</h3>
             <p>
-              Believe it or not I'm walking on air. I never thought I could feel
-              so free. Flying away on a wing and a
+              Dunder Mifflin Paper Company, Inc. is a fictional paper company in the television series The Office.
             </p>
           </div>
         </div>
@@ -89,13 +88,13 @@
       </div>
     </section>
 
-    <section class="index-products">
+    <section class="index-products" data-aos="fade-down">
       <div class="index-products-conteudo">
         <div class="index-titulo">
-          <h1>Products</h1>
+          <h1 data-aos="fade-down">Products</h1>
         </div>
 
-        <div class="index-products-img">
+        <div class="index-products-img" data-aos="fade-down">
           <img src="img/testeprod.png" alt="Produto" />
           <div class="products-hover">
               <p>
@@ -105,14 +104,12 @@
               <span>$10 ~ $30</span>
           </div>
         </div>
-        <div class="index-products-desc">
+        <div class="index-products-desc" data-aos="fade-down">
           <p>
-            Monitor keyword rankings daily to strategise and forecast your
-            digital marketing efforts. Track tens of thousands of keywords and
-            manage valuable keyterms with easy-to-edit labels. Monitor keyword
-            rankings daily to strategise and forecast your digital marketing
-            efforts. Track tens of thousands of keywords and manage valuable
-            keyterms with easy-to-edit labels.
+            The company was founded by Robert Dunder and Robert Mifflin in 1949, where they supplied metal brackets.
+            Eventually, the company started selling paper and opened several branches across the Northeastern United States
+            In 2009, the company went bankrupt, and was bought by printer company Sabre. In 2012, Sabre was dissolved and the company became Dunder Mifflin once again.
+            As of Finale, the CEO is David Wallace.
           </p>
           <a href="products.html"><button class="btn">Learn more</button></a>
         </div>
@@ -120,16 +117,28 @@
     </section>
 
     <section class="index-gallery">
-      <div class="images-index-gallery">
-        <div><a data-fancybox="gallery" href="img/1gallery.jpg"><img src="img/1gallery.jpg" alt="Imagem 1" /></a></div>
-        <div><a data-fancybox="gallery" href="img/2gallery.jpg"><img src="img/2gallery.jpg" alt="Imagem 2" /></a></div>
-        <div><a data-fancybox="gallery" href="img/3gallery.jpg"><img src="img/3gallery.jpg" alt="Imagem 3" /></a></div>
+      <div class="images-index-gallery" data-aos="fade-down">
+          <div>
+            <a data-fancybox="gallery" href="img/5.png"><img src="img/5.png" alt="Imagem 1"/></a>
+      </div>
+        <div>
+            <a data-fancybox="gallery" href="img/2.png"><img src="img/2.png" alt="Imagem 2" /></a>
+          </div>
+        <div>
+            <a data-fancybox="gallery" href="img/3.png"><img src="img/3.png" alt="Imagem 3" /></a>
+        </div>
+        <div>
+            <a data-fancybox="gallery" href="img/4.png"><img src="img/4.png" alt="Imagem 4" /></a>
+        </div>
+      </div>
+      <div class="btn-gallery">
+        <a href="about.html"><button class="btn">See more</button></a>
       </div>
     </section>
 
     <section class="index-clientes-bg">
-      <div class="index-clientes">
-        <div class="index-desc-clientes">
+      <div class="index-clientes" data-aos="fade-down">
+        <div class="index-desc-clientes" data-aos="fade-down">
           <h1>Our clients <b>loves</b> what we do</h1>
           <p>
             Dunder Mifflin Incorporated provides its customers quality office
@@ -138,14 +147,14 @@
           </p>
           <a href="contact.html"><button class="btn-transparente">Contact us</button></a>
         </div>
-        <div class="index-quotes-clientes">
+        <div class="index-quotes-clientes" data-aos="fade-down">
           <div>
             <img src="img/cliente1.png" alt="Cliente 1" />
             <blockquote>
               <p>
                 Dunder Mifflin Incorporated provides its customers quality office and information technology products furniture printing value
               </p>
-              <cite>Fulano de tal</cite>
+              <cite>Dunmore High School</cite>
             </blockquote>
           </div>
           <div class="divisoria-clientes"></div>
@@ -155,7 +164,7 @@
             <p>
               Dunder Mifflin Incorporated provides its customers quality office and information technology products furniture printing value
             </p>
-            <cite>Fulano de tal</cite>
+            <cite>Larry Meyers</cite>
           </blockquote>
         </div>
       </div>
@@ -214,5 +223,30 @@
     <script src="js/jquery.js"></script>
     <script type="text/javascript" src="scripts.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+        $(".images-index-gallery").slick({
+          slidesToShow: 4,
+          slidesToScroll: 4,
+          dots: true,
+          arrows: false,
+          infinite: true,
+          autoplay: true,
+          responsive: [
+            {
+              breakpoint: 960,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+              },
+            },
+          ],
+        });
+
+        AOS.init();
+      });
+      </script>
   </body>
 </html>
