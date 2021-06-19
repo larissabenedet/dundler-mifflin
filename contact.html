@@ -7,6 +7,7 @@
     <title>Contact us | Dundler Mifflin</title>
     <link rel="stylesheet" href="css/reset.css" type="text/css" />
     <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link href="css/messagebox.css" rel="stylesheet" />
   </head>
   <body>
     <header>
@@ -42,10 +43,26 @@
         <div id="img-map">
           <img src="/img/contact/map.png" alt="Map" />
         </div>
-        <div id="form">
-          Form
-          <a href=""><button class="btn">Submit</button></a>
-        </div>
+        <form action="" id="form">
+          <input type="text" name="name" id="name" placeholder="Name" />
+          <input type="text" name="email" id="email" placeholder="E-mail" />
+          <input type="text" name="phone" id="phone" placeholder="Phone" />
+          <input
+            type="text"
+            name="subject"
+            id="subject"
+            placeholder="Subject"
+          />
+          <textarea
+            name="message"
+            id="message"
+            rows="8"
+            placeholder="Type here"
+          ></textarea>
+          <div class="bt-form">
+            <button class="btn" type="submit" id="bt-form">Submit</button>
+          </div>
+        </form>
       </div>
     </section>
 
@@ -74,7 +91,8 @@
             <ul>
               <li>
                 <address>
-                  2005 Stokes Isle Apartment. 896, Washington 10010, USA
+                  1725 Slough Avenue<br />
+                  Scranton, USA
                 </address>
               </li>
               <li><strong>https://example.com</strong></li>
@@ -85,5 +103,14 @@
       </div>
     </footer>
     <script src="js/jquery.js"></script>
+    <script src="js/messagebox.js"></script>
+    <script>
+      $("#form").submit(function (event) {
+        $.MessageBox(
+          "This form is only fictitious. Contact the developer by <b>larissavbenedet@gmail.com</b>"
+        );
+        event.preventDefault();
+      });
+    </script>
   </body>
 </html>
