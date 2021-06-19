@@ -133,6 +133,7 @@ img {
   font-size: 1em;
   font-weight: 500;
   letter-spacing: 0.5px;
+  transition: none !important;
 }
 .header-menu ul a.ativo,
 .header-menu ul a:hover {
