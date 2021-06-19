@@ -1,8 +1,8 @@
-# Dundler Mifflin Paper Company Website :office_worker:
+# Dundler Mifflin Paper Company | Website
 ![Website Preview](git/home.png)
-```
-[Click here to access the website](https://larissabenedet.github.io/dundler-mifflin/)
-```
+
+### [Click here to access the website](https://larissabenedet.github.io/dundler-mifflin) :technologist:
+
 ## About 
 Website created for the Dunder Mifflin company, from **"The Office"** series, 
 with the intention of presenting the company and its products to a younger audience.
