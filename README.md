@@ -7,5 +7,6 @@
 Website created for the Dunder Mifflin company, from **"The Office"** series, 
 with the intention of presenting the company and its products to a younger audience.
 ## Technologies
+- Adobe XD
 - HTML/CSS
 - Jquery (Plugins: Fancybox, Slick and Messagebox)
