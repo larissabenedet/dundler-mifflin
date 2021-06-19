@@ -1,13 +1,11 @@
-const descricaoHover = document.querySelector('.products-hover')
+$( document ).ready(function() {
+    $(".products-hover").hide();
+    // $(".texto-gallery").hide();
+});
 
-window.onload = function() {
-    descricaoHover.style.display = "none"
-};
-
-function hoverProdutos() {
-    descricaoHover.style.display = "flex"
-}
-
-function outHoverProdutos() {
-    descricaoHover.style.display = "none"
-}
+$(".index-products-img").mouseover(function() {
+    $(".products-hover").fadeIn("fast");
+  });
+$(".index-products-img").mouseleave(function() {
+    $(".products-hover").fadeOut("fast");
+  });
