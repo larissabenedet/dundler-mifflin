@@ -7,6 +7,7 @@
     <title>Dundler Mifflin | Paper Company</title>
     <link rel="stylesheet" href="css/reset.css" type="text/css" />
     <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
   </head>
   <body>
     <header>
@@ -119,17 +120,10 @@
     </section>
 
     <section class="index-gallery">
-      <div class="img-gallery">
-        <img src="img/1gallery.jpg" alt="Imagem 1" />
-        <a href="about.html"><p class="texto-gallery">See more</p></a>
-      </div>
-      <div class="img-gallery">
-        <img src="img/2gallery.jpg" alt="Imagem 2" />
-        <a href="about.html"><p class="texto-gallery">See more</p></a>
-      </div>
-      <div class="img-gallery">
-        <img src="img/3gallery.jpg" alt="Imagem 3" />
-        <a href="about.html"><p class="texto-gallery">See more</p></a>
+      <div class="images-index-gallery">
+        <div><a data-fancybox="gallery" href="img/1gallery.jpg"><img src="img/1gallery.jpg" alt="Imagem 1" /></a></div>
+        <div><a data-fancybox="gallery" href="img/2gallery.jpg"><img src="img/2gallery.jpg" alt="Imagem 2" /></a></div>
+        <div><a data-fancybox="gallery" href="img/3gallery.jpg"><img src="img/3gallery.jpg" alt="Imagem 3" /></a></div>
       </div>
     </section>
 
@@ -219,5 +213,6 @@
     </footer>
     <script src="js/jquery.js"></script>
     <script type="text/javascript" src="scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
   </body>
 </html>

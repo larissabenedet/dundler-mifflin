@@ -7,7 +7,12 @@
     <title>About | Dundler Mifflin</title>
     <link rel="stylesheet" href="css/reset.css" type="text/css" />
     <link rel="stylesheet" href="css/style.css" type="text/css" />
-    <link rel="stylesheet" href="css/lightbox.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
   </head>
   <body>
     <header>
@@ -94,40 +99,95 @@
     <section class="gallery-about">
       <div class="gallery-texto">
         <h1>Our gallery</h1>
-        <span>Scranton's branch</span>
-        <span class="active">Scranton's branch</span>
-        <span>Scranton's branch</span>
+        <span class="gallery-menu" id="ny">Corporate Headquarters</span>
+        <span class="active gallery-menu" id="scranton">Scranton's branch</span>
+        <span class="gallery-menu" id="utica">Utica's branch</span>
       </div>
     </section>
-    <div class="gallery-fotos">
-      <div class="foto-topo">
-        <a href="img/about/1.png" data-lightbox="gallery-about"
+    <div class="gallery-fotos-scranton gallery-all">
+      <div>
+        <a href="img/about/1.png" data-fancybox="gallery-fotos-scranton"
           ><img src="img/about/1.png" alt="Gallery Image"
         /></a>
       </div>
-      <div class="foto-topo">
-        <a href="img/about/2.png" data-lightbox="gallery-about"
+      <div>
+        <a href="img/about/2.png" data-fancybox="gallery-fotos-scranton"
           ><img src="img/about/2.png" alt="Gallery Image"
         /></a>
       </div>
-      <div class="foto-topo">
-        <a href="img/about/3.png" data-lightbox="gallery-about"
+      <div>
+        <a href="img/about/3.png" data-fancybox="gallery-fotos-scranton"
           ><img src="img/about/3.png" alt="Gallery Image"
         /></a>
       </div>
-      <div class="foto-topo">
-        <a href="img/about/4.png" data-lightbox="gallery-about"
-          ><img src="img/about/4.png" alt="Gallery Image"
+      <div class="foto-bottom">
+        <a href="img/about/7.png" data-fancybox="gallery-fotos-scranton"
+          ><img src="img/about/7.png" alt="Gallery Image"
         /></a>
       </div>
       <div class="foto-bottom">
-        <a href="img/about/5.png" data-lightbox="gallery-about"
+        <a href="img/about/6.png" data-fancybox="gallery-fotos-scranton"
           ><img src="img/about/6.png" alt="Gallery Image"
         /></a>
       </div>
-      <div class="foto-bottom">
-        <a href="img/about/6.png" data-lightbox="gallery-about"
-          ><img src="img/about/7.png" alt="Gallery Image"
+    </div>
+
+    <div class="gallery-fotos-ny gallery-all">
+      <div>
+        <a href="img/about/jo.jpg" data-fancybox="gallery-fotos-ny"
+          ><img src="img/about/jo.jpg" alt="Gallery Image"
+        /></a>
+      </div>
+      <div>
+        <a href="img/about/david.jpg" data-fancybox="gallery-fotos-ny"
+          ><img src="img/about/david.jpg" alt="Gallery Image"
+        /></a>
+      </div>
+      <div>
+        <a href="img/about/team.png" data-fancybox="gallery-fotos-ny"
+          ><img src="img/about/team.png" alt="Gallery Image"
+        /></a>
+      </div>
+      <div>
+        <a href="img/about/robert.jpg" data-fancybox="gallery-fotos-ny"
+          ><img src="img/about/robert.jpg" alt="Gallery Image"
+        /></a>
+      </div>
+      <div>
+        <a href="img/about/jo2.jpg" data-fancybox="gallery-fotos-ny"
+          ><img src="img/about/jo2.jpg" alt="Gallery Image"
+        /></a>
+      </div>
+      <div>
+        <a href="img/about/david2.jpg" data-fancybox="gallery-fotos-ny"
+          ><img src="img/about/david2.jpg" alt="Gallery Image"
+        /></a>
+      </div>
+    </div>
+    <div class="gallery-fotos-utica gallery-all">
+      <div>
+        <a href="img/about/utica1.jpg" data-fancybox="gallery-fotos-utica"
+          ><img src="img/about/utica1.jpg" alt="Gallery Image"
+        /></a>
+      </div>
+      <div>
+        <a href="img/about/utica2.jpg" data-fancybox="gallery-fotos-utica"
+          ><img src="img/about/utica2.jpg" alt="Gallery Image"
+        /></a>
+      </div>
+      <div>
+        <a href="img/about/utica4.jpg" data-fancybox="gallery-fotos-utica"
+          ><img src="img/about/utica4.jpg" alt="Gallery Image"
+        /></a>
+      </div>
+      <div>
+        <a href="img/about/utica3.jpg" data-fancybox="gallery-fotos-utica"
+          ><img src="img/about/utica3.jpg" alt="Gallery Image"
+        /></a>
+      </div>
+      <div>
+        <a href="img/about/utica6.jpg" data-fancybox="gallery-fotos-utica"
+          ><img src="img/about/utica6.jpg" alt="Gallery Image"
         /></a>
       </div>
     </div>
@@ -232,6 +292,36 @@
       </div>
     </footer>
     <script src="js/jquery.js"></script>
-    <script src="js/lightbox.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script type="text/javascript" src="scripts.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $(".gallery-fotos-scranton").slick({
+          slidesToShow: 4,
+          slidesToScroll: 4,
+          dots: true,
+          arrows: false,
+          infinite: true,
+          autoplay: true,
+        });
+        $(".gallery-fotos-ny").slick({
+          slidesToShow: 4,
+          slidesToScroll: 4,
+          dots: true,
+          arrows: false,
+          infinite: true,
+          autoplay: true,
+        });
+        $(".gallery-fotos-utica").slick({
+          slidesToShow: 4,
+          slidesToScroll: 4,
+          dots: true,
+          arrows: false,
+          infinite: true,
+          autoplay: true,
+        });
+      });
+    </script>
   </body>
 </html>

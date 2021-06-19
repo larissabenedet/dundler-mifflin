@@ -410,56 +410,6 @@ img {
   display: flex;
   margin-bottom: 60px;
 }
-.img-gallery {
-  flex: 1 1 260px;
-  position: relative;
-}
-.texto-gallery {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  color: #fff;
-  font-size: 1.62em;
-  line-height: 24px;
-  font-weight: 600;
-  text-transform: uppercase;
-  z-index: 999;
-}
-.texto-gallery::after {
-  content: "";
-  display: block;
-  width: 117px;
-  height: 1px;
-  background-color: #fff;
-  margin-top: 10px;
-}
-.img-gallery img {
-  min-height: 100%;
-}
-.img-gallery:after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.8);
-  opacity: 0;
-  transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-}
-.img-gallery:hover:after {
-  opacity: 1;
-}
-.img-gallery:hover .texto-gallery {
-  display: flex;
-}
 
 .index-clientes-bg {
   background-color: #FFF;
@@ -872,17 +822,10 @@ img {
 .gallery-texto span.active, .gallery-texto span:hover {
   background-color: #00a6cf;
 }
-.gallery-fotos{
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 35px;
-}
-.gallery-fotos div.foto-topo{
-  flex: 1 1 380px;
-  max-height: 268px;
-}
-.gallery-fotos div.foto-bottom{
-  flex: 1 1 780px;
+
+.gallery-fotos-ny div img, .gallery-fotos-utica div img {
+  flex: 1;
+  height: 275px;
 }
 
 @media (max-width: 620px) {
@@ -904,7 +847,7 @@ img {
   max-width: 960px;
   display: flex;
   flex-wrap: wrap;
-  margin: 0 auto 55px auto;
+  margin: 80px auto 55px auto;
 }
 .team h1{
   margin: 0 auto 35px auto;
@@ -1211,16 +1154,10 @@ form .bt-form button{
     flex: 1 1 340px;
     margin: 0 auto;
   }
-  /* form input{
-    margin: 0 0 10px 0;
-  } */
   form textarea{
     flex: 1 1 340px;
     margin: 0 10px 20px 10px;
   }
-  /* form .bt-form {
-    margin: 0;
-  } */
 }
 @media (max-width: 838px) {
   form input{
