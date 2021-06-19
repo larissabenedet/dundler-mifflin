@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dundler Mifflin | Paper Company</title>
     <link rel="stylesheet" href="css/reset.css" type="text/css" />
-    <link rel="stylesheet" href="css/style.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
     <link rel="stylesheet" type="text/css" href="slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   </head>
-  <body>
+  <body id="index">
     <header>
       <div class="header" data-aos="fade-down">
         <div class="header-logo" data-aos="fade-down">
@@ -31,18 +31,37 @@
       </div>
     </header>
 
-    <div class="slider-bg" data-aos="fade-down">
-      <div class="slider">
-        <div class="texto-slider" data-aos="fade-down">
-          <h2>Dedication to the costumer.</h2>
-          <p>
-            Products and services with a dedication to the highest degree of
-            integrity.
-          </p>
-          <a href="about.html"
-            ><button class="btn-transparente">Learn more</button></a
-          >
-        </div>
+    <div class="slider">
+      <div class="carrousel-1">
+        <div class="carrousel-1-bg" data-aos="fade-down">
+          <div class="conteudo-slider">
+            <div class="texto-slider" data-aos="fade-down">
+              <h2>Dedication to the costumer.</h2>
+              <p>
+                Products and services with a dedication to the highest degree of
+                integrity.
+              </p>
+              <a href="about.html"
+                ><button class="btn-transparente">Learn more</button></a
+              >
+            </div>
+          </div>
+          </div>
+      </div>
+      <div class="carrousel-2">
+        <div class="carrousel-2-bg" data-aos="fade-down">
+          <div class="conteudo-slider">
+            <div class="texto-slider" data-aos="fade-down">
+              <h2>High quality office supplies.</h2>
+              <p>
+                Unique and unbeatable material quality.
+              </p>
+              <a href="products.html"
+                ><button class="btn-transparente">Learn more</button></a
+              >
+            </div>
+          </div>
+          </div>
       </div>
     </div>
 
@@ -239,6 +258,23 @@
               settings: {
                 slidesToShow: 2,
                 slidesToScroll: 2,
+              },
+            },
+          ],
+        });
+        $(".slider").slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: false,
+          arrows: true,
+          infinite: true,
+          autoplay: true,
+          responsive: [
+            {
+              breakpoint: 1090,
+              settings: {
+                dots: true,
+                arrows: false,
               },
             },
           ],
